@@ -14,7 +14,7 @@
     ● Html 5 
     ● Css 3
     ● JavaScript
-    ● Bootsrap 
+    ● Bootstrap 
 ### ○ Database 
     ● Mongo DB 
 
