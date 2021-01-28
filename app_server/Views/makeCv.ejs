@@ -1,0 +1,115 @@
+<form action=""method="POST">
+<% const variables= ["Name","Surname","Birhtday","Position"," Education","Education2","Email","PhoneNumber","Linkedin","Github"]%>
+<% const variablesexperience= ["Workexperience1","Workexperience2","Workexperience3"]%>
+<% const variablesSkill= ["Skill1","Skill2","Skill3","Skill4"]%>
+<% const variablesLanguage= ["Language1","Language2","Language3"]%>
+<% const variablesHobies= ["Hobies1","Hobies2","Hobies3","Hobies4"]%>
+
+<div class="container">
+    <div class="row">
+    <div class="col-sm-5">
+        
+
+<%for(var i=0;i<variables.length;i+=2){%>
+
+<div class="form-group">
+    <label ><%=variables[i]%></label>
+    <input type="text" class="form-control" name=<%=variables[i]%> id="<%=variables[i]%>"placeholder=<%=variables[i]%>>
+</div>
+
+<% } %>
+</div>
+<div class="col-sm-1"></div>
+<div class="col-sm-5">
+<%for(var i=1;i<variables.length;i+=2){%>
+
+    <div class="form-group">
+        <label ><%=variables[i]%></label>
+        <input type="text" class="form-control" name=<%=variables[i]%> id="<%=variables[i]%>"placeholder=<%=variables[i]%>>
+    </div>
+    
+    <% } %>
+</div>
+</div>
+<div class="row">
+    <%for(var i=0;i<variablesexperience.length;i+=1){%>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label ><%=variablesexperience[i]%></label>
+                <input type="text" class="form-control" name=<%=variablesexperience[i]%> id="<%=variablesexperience[i]%>"placeholder=<%=variablesexperience[i]%>>
+            </div>
+        </div>
+    <% } %>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-11">
+<div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Short Biography</span>
+    </div>
+    <textarea class="form-control" name=ShortBiography id="ShortBiography" aria-label="With textarea" style=" height: 150px;"></textarea>
+  </div>
+</div>
+</div>
+<div class="row" style="margin-top: 10px;">
+</div>
+<div class="row">
+    
+    <%for(var i=0;i<variablesSkill.length;i+=1){%>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label ><%=variablesSkill[i]%></label>
+            <input type="text" class="form-control" name=<%=variablesSkill[i]%> id="<%=variablesSkill[i]%>"placeholder=<%=variablesSkill[i]%>>
+        </div>
+    </div>
+    <% } %>
+
+  
+
+</div>
+<div class="row">
+    
+    <%for(var i=0;i<variablesLanguage.length;i+=1){%>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label ><%=variablesLanguage[i]%></label>
+            <input type="text" class="form-control" name=<%=variablesLanguage[i]%> id="<%=variablesLanguage[i]%>"placeholder=<%=variablesLanguage[i]%>>
+        </div>
+    </div>
+    <% } %>
+    
+
+  
+
+</div>
+<div class="row">
+    <%for(var i=0;i<variablesHobies.length;i+=1){%>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label ><%=variablesHobies[i]%></label>
+                <input type="text" class="form-control" name=<%=variablesHobies[i]%> id="<%=variablesHobies[i]%>"placeholder=<%=variablesHobies[i]%>>
+            </div>
+        </div>
+    <% } %>
+</div>
+
+<div class="row" style="margin-top: 10px;">
+    
+
+</div>   
+<div class="form-row">
+    <div class="form-group col-md-5">
+    </div>
+    <div class="form-group col-md-1">
+        <button type="submit" class="btn btn-danger active">
+            <a style="text-decoration: none ; color: whitesmoke" >Creat CV</a>
+        </button>
+       
+    </div>
+</div>
+</div>
+
+</form>

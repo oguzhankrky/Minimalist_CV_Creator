@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <div class="form-row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3">
+    
+    <label for="img">Upload Cv Photo:</label>
+    <label for="Upload" class="btn btn btn-secondary">Select Image</label>
+    <input id="Upload" style="visibility:hidden;"  type='file'  onchange="readURL(this);" />
+    <button type="button"  class="btn btn-secondary" onclick="printDiv('page')">Print only the above div </button>
+    
+  </div>
+  <style> 
+    
+</style>
+  <div class="col-sm-4">
+    <div  id="pageprint"> 
+        
+        <page id="page" size="A4">
+
+        <div class= "vertical">
+          <div class= "vertical2">
+        <div class="row">
+          <div style="margin-left: 30px;margin-top: 30px" class="col-sm-3">  
+            
+            <img  width="250px" height="200px" id="profilpicture" />
+            
+          </div>
+
+          <div style="margin-left: 30px;margin-top: 30px" class="col-sm-3"> <h3><%=Name %> <%=Surname%> </h3> <h4><%=Position%></h4></div>
+          
+          <div style="margin-left: 30px;margin-top: 30px" class="col-sm-3"><p><b>Birhtday:</b> <%= Birhtday%></p> <p><b>Email:</b> <%= Email%></p> <p><b>Phone Number:</b> <%= PhoneNumber%></p><p><b>Github:</b> <%= Github%><p><b>Linkedin:</b> <%= Linkedin%></p></div>
+          <div style="margin-left: 30px;margin-top: 30px" class="col-sm-1"> </p></div>
+          
+        </div>
+        <div  style="margin-left: 30px;margin-top: 30px" class="row">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-8">
+            <h3>Short Biography</h3>
+            <p style="width: 700px; word-wrap: break-word;">
+              <%= ShortBiography%>
+          </p>
+           
+            
+          </div>
+
+          <div class="col-sm-3"></div>
+        </div>
+        <div class="row" style="margin-top: 100px;"></div>
+        <div  class="row">
+          <div class="col-sm-3"><h3>--------SKILSS-------</h3><b><p>--> <%=Skill1 %> </p><p>--> <%=Skill2 %> </p><p>--> <%=Skill3 %></p><p>--> <%=Skill4 %></p></b></div>
+          <div class="col-sm-6"></div>
+          <div class="col-sm-3"><h3>-----EXPERİENCES---</h3><b><p>--> <%=Workexperience1 %></p><p>--> <%=Workexperience2 %></p><p>--> <%=Workexperience3 %></p></b></div>
+        </div>
+        <div class="row" style="margin-top: 100px;"></div>
+        <div  class="row">
+          <div class="col-sm-3"><h3>------LANGUAGE-----</h3><b><p>--> <%=Language1 %> </p><p>--> <%=Language2 %> </p><p>--> <%=Language3 %></p></b></div>
+          <div class="col-sm-6"></div>
+          <div class="col-sm-3"><h3>------EDUCATION----</h3><b><p>--> <%=Education %></p><p>--> <%=Education2 %></p></b></div>
+        </div>
+        <div class="row" style="margin-top: 100px;"></div>
+        <div  class="row">
+          <div class="col-sm-3"><h3>------HOBIES------</h3><b><p>--> <%=Hobies1 %> </p><p>--> <%=Hobies1 %> </p><p>--> <%=Hobies1 %></p></b></div>
+          <div class="col-sm-6"></div>
+         
+        </div>
+      </div> 
+    </div>
+  </div>
+        </page>
+    
+  </div>
+   
+       
+</div>
+
+     
+<style media="print">
+  @media print {
+      
+  body * {
+    visibility: hidden;
+    margin: 1.6cm;
+
+  }
+  #section-to-print, #section-to-print * {
+    visibility: visible;
+   
+  }
+  #section-to-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+  }
+  @page { margin: 0; }
+ 
+  
+  
+
+}
+
+</style>
+
+<script >
+     function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+  
+              reader.onload = function (e) {
+                  $('#profilpicture')
+                      .attr('src', e.target.result);
+              };   
+              reader.readAsDataURL(input.files[0]);
+          }
+    }
+      
+ function printDiv(divName){
+			var printContents = document.getElementById(divName).innerHTML;
+			var originalContents = document.body.innerHTML;
+
+			document.body.innerHTML = printContents;
+
+			window.print();
+
+			document.body.innerHTML = originalContents;
+
+		}
+
+</script>
+
+</html>
+

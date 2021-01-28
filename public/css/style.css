@@ -1,0 +1,33 @@
+.modern{
+    background-color: blue;
+}
+page {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  }
+page[size="A4"] {  
+    width: 27cm;
+    height: 35cm; 
+  }
+page[size="A4"][layout="landscape"] {
+    width: 29.7cm;
+    height: 35cm;  
+  }
+  img{
+    max-width:180px;
+  }
+   
+    
+   
+
+.vertical { 
+    border-right: 10px solid grey; 
+    height: 35cm; 
+}
+.vertical2 { 
+  border-left: 10px solid grey; 
+  height: 35cm; 
+}
