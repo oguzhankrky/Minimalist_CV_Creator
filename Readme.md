@@ -13,7 +13,8 @@
 ### ○ Frontend
     ● Html 5 
     ● Css 3
-    ● JavaScript  
+    ● JavaScript
+    ● Bootsrap 
 ### ○ Database 
     ● Mongo DB 
 
@@ -43,4 +44,4 @@
 
 
 #  License 📝
-    ● GNU General Public License v3.0 
+    ● MIT License
